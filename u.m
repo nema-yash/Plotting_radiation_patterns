@@ -1,0 +1,13 @@
+clc;
+clear all;
+close all;
+lambda=input('Enter the value of lambda');
+L=input('Enter the value of l');
+x=eps:0.001:2*pi;
+p=cos(cos(x).*(2*pi/lambda).*L/2)-(cos((2*pi/lambda).*L/2));
+m=p./sin(x);
+polar(x,m);
+hold on;
+m=-p./sin(x);
+polar(x,m);
+view(-270,-90);
